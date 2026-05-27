@@ -12,16 +12,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <marquee class=" fast" direction=" "> 📢 🚚 সারা দেশে ডেলিভারি — এখনই অর্ডার করুন 📦 ঘরে বসেই অর্ডার করুন — WhatsApp: 01605019908 </marquee>
 <header>MRST Fashion Store</header>
 
-<nav  class="navbar">
-<a href="home.html" class="active">Home</a>
-<a href="contact.html">contact</a>
-<a href="about.html"> about</a>
-<a href="Smart Electronics.html">Smart Electronics</a>
-<a href="MRST Cricket Zone.html">MRST Cricket Zone</a>
-<a href="MRST Girls Collection.html">MRST Girls Collection</a>
-<a href="Baby Boy & Girl Shoes.html"> Baby Boy & Girl Shoes</a>
 
-</nav>
 <!-- BANNER SLIDER -->
 <!-- Simple Slider (No CSS needed extra) -->
 
@@ -37,14 +28,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <div class="icons">
 
-<div>❤️</div>
+  <div class="icon-box">
+    <span>❤️</span>
+    <small>Favorite</small>
+  </div>
 
-<div onclick="openCart()">
-🛒
-<span id="cartCount">0</span>
-</div>
+  <div class="icon-box" onclick="openCart()">
+    <span class="cart-icon">
+      🛒
+      <span id="cartCount">0</span>
+    </span>
+    <small>Cart</small>
+  </div>
 
-<div onclick="openProfile()">👤</div>
+  <div class="icon-box" onclick="openProfile()">
+    <span>👤</span>
+    <small>Account</small>
+  </div>
 
 </div>
 
@@ -102,6 +102,46 @@ src="img/cover3.jpg">
 
 
 </div>
+<hr>
+<br>
+<nav class="navbar">
+
+<a href="home.html" class="nav-item active">
+  <img src="imgjuta/103.jpg.jpg">
+  <span>Home</span>
+</a>
+
+<a href="contact.html" class="nav-item">
+  <img src="imgjuta/106.jpg.jpg">
+  <span>Contact</span>
+</a>
+
+<a href="about.html" class="nav-item">
+  <img src="imgjuta/103.jpg.jpg">
+  <span>About</span>
+</a>
+
+<a href="Smart Electronics.html" class="nav-item">
+  <img src="imgjuta/107.jpg.jpg">
+  <span>Electronics</span>
+</a>
+
+<a href="MRST Cricket Zone.html" class="nav-item">
+  <img src="img/cricket.png">
+  <span>Cricket</span>
+</a>
+
+<a href="MRST Girls Collection.html" class="nav-item">
+  <img src="img/girls.png">
+  <span>Girls</span>
+</a>
+
+<a href="Baby Boy & Girl Shoes.html" class="nav-item">
+  <img src="img/shoes.png">
+  <span>Shoes</span>
+</a>
+
+</nav>
 <hr>
 <br>
 
@@ -253,6 +293,9 @@ src="img/cover3.jpg">
 
 
 </div>
+
+
+
 
 
 
