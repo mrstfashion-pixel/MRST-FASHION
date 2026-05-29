@@ -911,31 +911,41 @@ document.body.classList.toggle("dark");
 }
 
 let banners = [
-
-"img/cover2.jpg",
-"img/cover3.jpg",
-"img/cover4.jpg",
-"img/bannnnnar.jpg",
-"img/bannnar.jpg",
-"img/cover1.jpg"
-
-
-
+{
+  image: "img/cover2.jpg",
+  link: "shoes.html",
+  text: "👟 Order Shoes"
+},
+{
+  image: "img/cover3.jpg",
+  link: "pant.html",
+  text: "👕 Order T-Shirt"
+},
+{
+  image: "img/cover4.jpg",
+  link: "watch.html",
+  text: "⌚ Order Watch"
+}
 ];
 
 let bannerIndex = 0;
 
-setInterval(function(){
+function updateBanner() {
+  document.getElementById("banner").src =
+    banners[bannerIndex].image;
 
-bannerIndex++;
+  document.getElementById("orderBtn").href =
+    banners[bannerIndex].link;
 
-if(bannerIndex >= banners.length){
-bannerIndex = 0;
+  document.getElementById("orderBtn").innerHTML =
+    banners[bannerIndex].text;
 }
 
-document.getElementById("banner").src =
-banners[bannerIndex];
+updateBanner();
 
+setInterval(() => {
+  bannerIndex = (bannerIndex + 1) % banners.length;
+  updateBanner();
 }, 8000);
 
 
