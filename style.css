@@ -37,52 +37,75 @@ font-weight:bold;
 }
 .navbar{
 display:flex;
-gap:12px;
+gap:15px;
 overflow-x:auto;
-padding:10px;
+padding:15px;
+scroll-behavior:smooth;
+}
+
+.navbar::-webkit-scrollbar{
+height:6px;
+}
+
+.navbar::-webkit-scrollbar-thumb{
+background:#ccc;
+border-radius:10px;
 }
 
 .navbar a{
 position:relative;
-width:120px;
-height:70px;
+width:140px;
+height:90px;
 flex-shrink:0;
-border-radius:12px;
+border-radius:18px;
 overflow:hidden;
 text-decoration:none;
-background:#eee;
-box-shadow:0 3px 10px rgba(0,0,0,.15);
+background:#fff;
+box-shadow:0 6px 15px rgba(0,0,0,.15);
+transition:.3s ease;
 }
 
-/* Category Image */
+.navbar a:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
 .navbar a img{
 width:100%;
 height:100%;
 object-fit:cover;
 display:block;
+transition:.4s;
 }
 
-/* Dark Overlay */
+.navbar a:hover img{
+transform:scale(1.1);
+}
+
 .navbar a::before{
 content:'';
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.35);
+background:linear-gradient(
+to top,
+rgba(0,0,0,.75),
+rgba(0,0,0,.15)
+);
 }
 
-/* Category Name */
 .navbar a span{
 position:absolute;
-top:50%;
 left:50%;
-transform:translate(-50%,-50%);
+bottom:10px;
+transform:translateX(-50%);
 color:#fff;
 font-weight:700;
-font-size:14px;
+font-size:15px;
 text-align:center;
 width:90%;
 z-index:2;
-text-shadow:0 2px 5px rgba(0,0,0,.5);
+text-shadow:0 2px 6px rgba(0,0,0,.6);
+letter-spacing:.3px;
 }
 
 
